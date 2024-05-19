@@ -6,3 +6,12 @@ def test_ask_question():
     assert ask_question("What is 2 + 2?", "4", 10) == 10
     assert ask_question("What is 99 / 3 ?", "33 ", 10) == 10
     assert ask_question("What is 100 - 11 ?", "89 ", 10) == 10
+
+def test_ask_question_incorrect_answer():
+    assert ask_question("What is 2 + 2?", "4", 10) == 10
+
+def test_ask_question_case_insensitive():
+    assert ask_question("What is 99 / 3?", "33", 10) == 10
+
+def test_ask_question_whitespace_insensitive():
+    assert ask_question("What is 100 - 11?", "89", 10) == 10
